@@ -1,0 +1,8 @@
+DirectoryIndex Getting_Started.php
+# For security reasons, Option all cannot be overridden.
+#Options All -Indexes
+Options ExecCGI Includes IncludesNOEXEC SymLinksIfOwnerMatch -Indexes
+
+RewriteEngine On
+
+RewriteRule ^example/(.*)$ /exampleViewer.php?name=$1

@@ -1,0 +1,332 @@
+body
+{
+	padding: 10px 50px;
+	margin: 0px;
+	font-family: Georgia, Verdana, Arial, serif;
+	background-color: #DDDDDD;
+}
+
+#page
+{
+	width: 100%;
+}
+
+#header
+{
+	border-width: 1px 1px 0px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #888866;
+	color: #CCCCCC;
+	padding: 30px 0px 0px;
+}
+
+#headerText
+{
+	background-color: #DDDDBB;
+	color: #000000;
+	padding: 10px;
+	border-width: 1px 0px;
+	border-style: solid;
+	border-color: #000000;
+}
+
+#title
+{
+	font-size: 40px;
+	color: #004400;
+	display: inline;
+}
+
+#search
+{
+	float: right;
+	margin-right: 10px;
+}
+
+#topLinks
+{
+	margin: 10px 0px 0px;
+	padding: 5px 0px 0px;
+	list-style-type: none;
+	width: 100%;
+	background-color: #DDDDBB;
+	border-width: 1px 0px 1px;
+	border-style: solid;
+	border-color: #000000;
+}
+
+#topLinks li
+{
+	display: inline;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #999999;
+	border-top: 1px solid #999999;
+	padding: 0px 15px;
+	margin-left: 10px;
+	background-color: #FFFFFF;
+}
+
+#feedbackLink
+{
+	float: right;
+	margin-right: 10px;
+	margin-top: -1px;
+}
+
+#topLinks li a
+{
+	width: 100%;
+}
+
+#topLinks li a:link, #topLinks li a:visited, #topLinks li a:active
+{
+	color: #0000FF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#topLinks li a:hover
+{
+	color: #0066FF;
+	text-decoration: underline;
+}
+
+#main
+{
+	background-color: #FFFFFF;
+	padding: 5px 0px 0px;
+	border-width: 0px 1px 1px;
+	border-style: solid;
+	border-color: #000000;
+}
+
+#leftLinks
+{
+	width: 170px;
+	float: left;
+	padding: 5px 0px;
+	text-align: center;
+	color: #004400;
+	background-color: #888866;
+	margin: 5px 0px 10px 10px;
+	border: 1px solid #000000;
+}
+
+#leftLinks div
+{
+	text-align: center;
+	border: 1px solid #000000;
+	width: 140px;
+	margin: 10px;
+	padding: 5px 5px 0px;
+	background-color: #DDDDBB;
+}
+
+#leftLinks div#sectionTitle
+{
+	border-width: 1px 0px;
+	width: 170px;
+	padding: 5px 0px;
+	margin: 0px;
+	font-weight: bold;
+}
+
+#leftLinks ul
+{
+	text-align: left;
+	list-style-type: none;
+	width: 140px;
+	padding: 0px 5px 0px;
+	margin: 5px -5px -5px;
+	background-color: #FFFFDD;
+	border-top: 1px solid #000000;
+}
+
+#leftLinks ul li
+{
+	padding: 0px 0px 0px 5px;
+	margin-bottom: 5px;
+	border: 1px solid #FFFFDD;
+}
+
+#leftLinks ul li a
+{
+	display: block;
+}
+
+#leftLinks ul li a:link, #leftLinks ul li a:visited, #leftLinks ul li a:active
+{
+	color: #006600;
+	text-decoration: none;
+}
+
+#leftLinks ul li a:hover
+{
+	text-decoration: underline;
+	color: #66AA66;
+}
+
+#splash
+{
+	float: right;
+	font-size: 2em;
+	font-weight: bold;
+	color: #DDDDBB;
+	margin-right: 10px;
+}
+
+#content
+{
+	color: #000000;
+	padding: 0px 10px 10px;
+	margin-left: 190px;
+}
+
+#clear
+{
+	clear: both;
+	width: 100%;
+}
+
+#footer
+{
+	background-color: #888866;
+	color: #DDDDBB;
+	text-align: center;
+	padding: 5px 0px;
+	border-width: 0px 1px 1px;
+	border-style: solid;
+	border-color: #000000;
+}
+
+#footer a:link, #footer a:active, #footer a:visited 
+{
+	color: #004400;
+	text-decoration: none;
+}
+
+#footer a:hover
+{
+	color: #002200;
+	text-decoration: underline;
+}
+
+#key
+{
+	width: 90%;
+	border: 1px solid #000000;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 0px 0px 5px;
+	font-weight: bold;
+}
+
+#key ul
+{
+	font-weight: normal;
+}
+
+#navigation
+{
+	margin-top: 10px;
+}
+
+#navigation a:link, #navigation a:active, #navigation a:visited
+{
+	color: #0000FF;
+	text-decoration: none;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#navigation a:hover
+{
+	text-decoration: underline;
+	color: #0066FF;
+}
+
+.float-right
+{
+	float: right;
+}
+
+p
+{
+	line-height: 1.4em;
+}
+
+h1
+{
+	font-size: 1.75em;
+	color: #004400;
+}
+
+h3
+{
+	color: #448844;
+}
+
+pre.example
+{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 90%;
+	background-color: #DDDDBB;
+	border: 1px solid #000000;	
+	padding: 10px;
+	font-weight: bold;
+	
+	word-wrap: break-word;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	white-space: pre-wrap;
+}
+
+pre.example code
+{
+	font-weight: normal;
+	text-align: left;
+	background-color: #FFFFFF;
+	display: block;
+	padding: 10px;
+	border: 1px solid #000000;
+}
+
+a:link, a:active, a:visited
+{
+	color: #0000FF;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #0066FF;
+	text-decoration: underline;
+}
+
+.answers
+{
+	margin-left: 50px;
+	line-height: 1.5em;
+}
+
+.answers textarea, .subanswers textarea, .textbox
+{
+	border: 1px sunken #004400;
+	background-color: #DDDDBB;
+	color: #004400;
+}
+
+.subanswers
+{
+	margin-left: 100px;
+	line-height: 1.5em;
+}
+
+.answers label, .subanswers label
+{
+	margin: 0px 20px 0px 0px;
+}
