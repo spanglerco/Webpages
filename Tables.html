@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Tables - Creating Webpages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="Paul Spangler" />
+<link rel="shortcut icon" href="http://spanglerco.com/favicon.gif" />
+<link rel="stylesheet" href="css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/IE6-main.css" />
+<![endif]-->
+</head>
+<body>
+<!--sphider_noindex-->
+<div id="page">
+<div id="header">
+<div id="headerText">
+<div id="search">Search the website:<form action="search.html" method="get" style="display: inline;">
+<table><tr><td>
+<div style="text-align: left; display: inline;"> 
+<input type="text" name="query" id="query" size="40" value="" />
+</div>
+</td>
+<td>
+<input type="submit" value="Search" />
+<input type="hidden" name="search" value="1" />
+</td></tr></table>
+</form>
+</div>
+<div id="title">Creating Webpages</div>
+</div>
+<ul id="topLinks">
+<li id="feedbackLink"><a href="feedback.html">Feedback</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="leftLinks">
+<div id="sectionTitle">Sections</div>
+<div>
+Overview
+<ul>
+<li><a href="index.html">Getting Started</a></li>
+</ul>
+</div>
+<div>
+Basic HTML
+<ul>
+<li><a href="HTML_Intro.html">HTML Intro</a></li>
+<li><a href="Basic_Tags.html">Basic Tags</a></li>
+<li><a href="Tag_Attributes.html">Tag Attributes</a></li>
+<li><a href="Lists.html">Lists</a></li>
+<li><a href="HTML_Elements.html">HTML Elements</a></li>
+<li><a href="Formatting.html">Formatting</a></li>
+<li><a href="Tables.html">Tables</a></li>
+</ul>
+</div>
+<div>
+Advanced HTML
+<ul>
+<li><a href="Styles.html">Styles</a></li>
+<li><a href="Text_and_Fonts.html">Text and Fonts</a></li>
+<li><a href="Links.html">Links</a></li>
+<li><a href="Color.html">Color</a></li>
+<li><a href="HTML_Documents.html">HTML Documents</a></li>
+<li><a href="Advanced_Styles.html">Advanced Styles</a></li>
+</ul>
+</div>
+</div>
+<!--/sphider_noindex-->
+<div id="splash">Basic HTML</div>
+<div id="content">
+<h1>Tables</h1>
+<div id="key">
+Key points
+<ul>
+<li>HTML Tables format text into a series of rows and columns.</li><li>Each table row has one or more cells, but all rows must have the same number of cells.</li><li>You can improve readability by adding captions and headers to tables, and by adjusting cell padding and spacing.</li></ul></div><p>Often used for formatting blocks of text, HTML tables are an easy way to add a fixed structure to a web page.</p>
+<h3>Creating a Simple Table</h3>
+<p>First, take a look at a simple table and the HTML used to create it:</p>
+<table border="1">
+	<tr>
+		<td>Row 1, Col 1</td>
+		<td>Row 1, Col 2</td>
+	</tr>
+	<tr>
+		<td>Row 2, Col 1</td>
+		<td>Row 2, Col 2</td>
+	</tr>
+</table>
+<pre class="example"><a href="example.html?name=tableSimple">Click to view Live Example</a>
+
+<code>&lt;table border="1"&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Row 1, Col 1&lt;/td&gt;
+		&lt;td&gt;Row 1, Col 2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Row 2, Col 1&lt;/td&gt;
+		&lt;td&gt;Row 2, Col 2&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code>
+A simple HTML table</pre><p>Not surprisingly, HTML tables are added using the &lt;table&gt; tag. But, similar to lists, the table tag alone doesn't tell the web browser anything useful. Instead, tables contain rows (each &lt;tr&gt; tag is a new table row) and columns. Within each row is a cell for every column (each &lt;td&gt;, or table data, is a single cell). The <i>border</i> attribute on the table tag tells the web browser to put a border around each cell of size 1. Increasing the value of the table border attribute will increase the size of the border around each cell.</p>
+<h3>Table Headers</h3>
+<p>HTML provides a way to easily add headers to each column of a table. Most web browsers will display table headers in bold so the reader can tell it apart from a regular table cell. To add a header, use the &lt;th&gt; tag (table header) instead of &lt;td&gt; for one of the rows:</p>
+<pre class="example"><a href="example.html?name=tableHeaders">Click to view Live Example</a>
+
+<code>&lt;table border="1"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Column 1&lt;/th&gt;
+		&lt;th&gt;Column 2&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Row 1, Col 1&lt;/td&gt;
+		&lt;td&gt;Row 1, Col 2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Row 2, Col 1&lt;/td&gt;
+		&lt;td&gt;Row 2, Col 2&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code>
+HTML table with column headers</pre><p>Which produces the following table:</p>
+<table border="1">
+	<tr>
+		<th>Column 1</th>
+		<th>Column 2</th>
+	</tr>
+	<tr>
+		<td>Row 1, Col 1</td>
+		<td>Row 1, Col 2</td>
+	</tr>
+	<tr>
+		<td>Row 2, Col 1</td>
+		<td>Row 2, Col 2</td>
+	</tr>
+</table>
+<p>Note that the &lt;th&gt; tags still appear in table rows (&lt;tr&gt;). HTML does not restrict table headers to being at the top of a table, either. Adding headers in multiple places in the table can help for tables with a lot of rows.</p>
+<h3>Captions</h3>
+<p>It is also easy to add captions to HTML tables using the &lt;caption&gt; tag. Most browsers display table captions centered above the table, and require the caption tag to appear immediately after the table tag:</p>
+<pre class="example"><a href="example.html?name=tableCaption">Click to view Live Example</a>
+
+<code>&lt;table border="1"&gt;
+	&lt;caption&gt;Table 1: A simple table&lt;/caption&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Column 1&lt;/th&gt;
+		&lt;th&gt;Column 2&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Row 1, Col 1&lt;/td&gt;
+		&lt;td&gt;Row 1, Col 2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Row 2, Col 1&lt;/td&gt;
+		&lt;td&gt;Row 2, Col 2&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code>
+The table with a caption added</pre><p>Which looks like:</p>
+<table border="1">
+	<caption>Table 1: A simple table</caption>
+	<tr>
+		<th>Column 1</th>
+		<th>Column 2</th>
+	</tr>
+	<tr>
+		<td>Row 1, Col 1</td>
+		<td>Row 1, Col 2</td>
+	</tr>
+	<tr>
+		<td>Row 2, Col 1</td>
+		<td>Row 2, Col 2</td>
+	</tr>
+</table>
+<h3>Table Formatting</h3>
+<p>Besides the border attribute, HTML tables also have the <i>cellspacing</i> and <i>cellpadding</i> attributes, which can help increase the readability of tables. Consider the following two tables:</p>
+<table border="0">
+	<tr>
+		<td valign="top"><table border="1">
+			<tr>
+				<td>2.112332</td>
+				<td>5.432165</td>
+			</tr>
+			<tr>
+				<td>3.765356</td>
+				<td>9.332865</td>
+			</tr>
+		</table></td>
+		<td style="width: 100px;">&nbsp;</td>
+		<td><table border="1" cellspacing="4" cellpadding="10">
+			<tr>
+				<th>Mass</th>
+				<th>Volume</th>
+			</tr>
+			<tr>
+				<td>2.112332</td>
+				<td>5.432165</td>
+			</tr>
+			<tr>
+				<td>3.765356</td>
+				<td>9.332865</td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<p>The second table, which adds table headers, cellpadding, and cellspacing, is much easier to read and understand. Cellpadding is space between the border of a cell and the cell's data, and cellspacing adds extra space between two cells. Here is the HTML for the second table above:</p>
+<pre class="example"><a href="example.html?name=tablePadding">Click to view Live Example</a>
+
+<code>&lt;table border="1" cellspacing="4" cellpadding="10"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Mass&lt;/th&gt;
+		&lt;th&gt;Volume&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2.112332&lt;/td&gt;
+		&lt;td&gt;5.432165&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;3.765356&lt;/td&gt;
+		&lt;td&gt;9.332865&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code>
+An HTML table is easier to read with headers and padding</pre><!--sphider_noindex-->
+<div id="navigation">
+<a href="Formatting.html">&lt;- Previous Section</a><a class="float-right" href="Styles.html">Next Section -&gt;</a></div>
+</div>
+<div id="clear"></div>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2010 <a href="http://spanglerco.com/websites.htm">Paul Spangler</a></div>
+</body>
+<!--/sphider_noindex-->
+</html>

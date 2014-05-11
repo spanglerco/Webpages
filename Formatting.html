@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Formatting - Creating Webpages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="Paul Spangler" />
+<link rel="shortcut icon" href="http://spanglerco.com/favicon.gif" />
+<link rel="stylesheet" href="css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/IE6-main.css" />
+<![endif]-->
+</head>
+<body>
+<!--sphider_noindex-->
+<div id="page">
+<div id="header">
+<div id="headerText">
+<div id="search">Search the website:<form action="search.html" method="get" style="display: inline;">
+<table><tr><td>
+<div style="text-align: left; display: inline;"> 
+<input type="text" name="query" id="query" size="40" value="" />
+</div>
+</td>
+<td>
+<input type="submit" value="Search" />
+<input type="hidden" name="search" value="1" />
+</td></tr></table>
+</form>
+</div>
+<div id="title">Creating Webpages</div>
+</div>
+<ul id="topLinks">
+<li id="feedbackLink"><a href="feedback.html">Feedback</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="leftLinks">
+<div id="sectionTitle">Sections</div>
+<div>
+Overview
+<ul>
+<li><a href="index.html">Getting Started</a></li>
+</ul>
+</div>
+<div>
+Basic HTML
+<ul>
+<li><a href="HTML_Intro.html">HTML Intro</a></li>
+<li><a href="Basic_Tags.html">Basic Tags</a></li>
+<li><a href="Tag_Attributes.html">Tag Attributes</a></li>
+<li><a href="Lists.html">Lists</a></li>
+<li><a href="HTML_Elements.html">HTML Elements</a></li>
+<li><a href="Formatting.html">Formatting</a></li>
+<li><a href="Tables.html">Tables</a></li>
+</ul>
+</div>
+<div>
+Advanced HTML
+<ul>
+<li><a href="Styles.html">Styles</a></li>
+<li><a href="Text_and_Fonts.html">Text and Fonts</a></li>
+<li><a href="Links.html">Links</a></li>
+<li><a href="Color.html">Color</a></li>
+<li><a href="HTML_Documents.html">HTML Documents</a></li>
+<li><a href="Advanced_Styles.html">Advanced Styles</a></li>
+</ul>
+</div>
+</div>
+<!--/sphider_noindex-->
+<div id="splash">Basic HTML</div>
+<div id="content">
+<h1>Formatting</h1>
+<div id="key">
+Key points
+<ul>
+<li>HTML includes many formatting tags to help text <b><i>stand out</i></b>.</li><li>Formatting tags can be nested, but must be closed in the correct order.</li></ul></div><h3>Common Formatting Tags</h3>
+<p>HTML includes a large number of tags made for formatting text. The two most common formatting tags are <i>&lt;i&gt;</i> (italics) and <b>&lt;b&gt;</b> (bold). Other common formatting tags include <sup>super</sup> and <sub>sub</sub>scripts (&lt;sub&gt; and &lt;sup&gt;), <code>computer output</code> (&lt;code&gt;), and</p>
+<pre>preformatted         text (&lt;pre&gt;).</pre>
+<pre class="example"><a href="example.html?name=formattingCommon">Click to view Live Example</a>
+
+<code>The two most common formatting tags are &lt;i&gt;italics&lt;/i&gt; and &lt;b&gt;bold&lt;/b&gt;. Other common formatting tags include &lt;sup&gt;super&lt;/sup&gt; and &lt;sub&gt;sub&lt;/sub&gt;scripts, &lt;code&gt;computer output&lt;/code&gt;, and &lt;pre&gt;preformatted         text&lt;/pre&gt;.</code>
+Examples of common formatting tags</pre><h3>More Formatting Tags</h3>
+<p>&lt;big&gt; and &lt;small&gt; can control the <big>size</big> of <small>text</small>, while &lt;ins&gt; and &lt;del&gt; can show document <del>proofreading</del> <ins>editing</ins>. HTML also helps quoting large peices of text using &lt;blockquote&gt;:</p>
+<blockquote><p>This is a long quote and would appear on multiple lines in a printed text. So, it needs to be in a blockquote rather than an inline quote surrounded by quotation marks. This is a long quote and would appear on multiple lines in a printed text. So, it needs to be in a blockquote rather than an inline quote surrounded by quotation marks. This is a long quote and would appear on multiple lines in a printed text. So, it needs to be in a blockquote rather than an inline quote surrounded by quotation marks.</p></blockquote>
+<pre class="example"><a href="example.html?name=formattingMore">Click to view Live Example</a>
+
+<code>&lt;p&gt;big and small can control the &lt;big&gt;size&lt;/big&gt; of &lt;small&gt;text&lt;/small&gt;, while ins and del can show document &lt;del&gt;proofreading&lt;/del&gt; &lt;ins&gt;editing&lt;/ins&gt;. HTML also helps quoting large peices of text using blockquote:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;This is a long quote and would appear on multiple lines in a printed text.&lt;/p&gt;&lt;/blockquote&gt;</code>
+More formatting examples</pre><h3>Using Formatting Tags</h3>
+<p>All of the formatting tags can be used anywhere within an HTML document that printed text appears. For example, within a paragraph (&lt;p&gt;) or link (&lt;a&gt;). This is made possible by HTML's support of element nesting as discussed in the previous section. Note also that two formatting tags can be <i><b>nested</b></i> to combine their properties, but it is important to close the tags in the correct order. See the example below:</p>
+<pre class="example"><a href="example.html?name=formattingNested">Click to view Live Example</a>
+
+<code>Two formatting tags can be &lt;i&gt;&lt;b&gt;nested&lt;/b&gt;&lt;/i&gt; to combine their properties.</code>
+Nesting multiple formatting tags</pre><p>Since the bold tag is opened <i>last</i>, it is closed <i>first</i>. Remember that only complete HTML elements can be nested, and elements include the start tag, content, and end tag. When writing HTML, it is always a good idea to close a tag right after opening it and then add the content last, so that the end tag will be in the correct place.</p>
+<!--sphider_noindex-->
+<div id="navigation">
+<a href="HTML_Elements.html">&lt;- Previous Section</a><a class="float-right" href="Tables.html">Next Section -&gt;</a></div>
+</div>
+<div id="clear"></div>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2010 <a href="http://spanglerco.com/websites.htm">Paul Spangler</a></div>
+</body>
+<!--/sphider_noindex-->
+</html>

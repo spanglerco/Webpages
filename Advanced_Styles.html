@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Advanced Styles - Creating Webpages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="Paul Spangler" />
+<link rel="shortcut icon" href="http://spanglerco.com/favicon.gif" />
+<link rel="stylesheet" href="css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/IE6-main.css" />
+<![endif]-->
+</head>
+<body>
+<!--sphider_noindex-->
+<div id="page">
+<div id="header">
+<div id="headerText">
+<div id="search">Search the website:<form action="search.html" method="get" style="display: inline;">
+<table><tr><td>
+<div style="text-align: left; display: inline;"> 
+<input type="text" name="query" id="query" size="40" value="" />
+</div>
+</td>
+<td>
+<input type="submit" value="Search" />
+<input type="hidden" name="search" value="1" />
+</td></tr></table>
+</form>
+</div>
+<div id="title">Creating Webpages</div>
+</div>
+<ul id="topLinks">
+<li id="feedbackLink"><a href="feedback.html">Feedback</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="leftLinks">
+<div id="sectionTitle">Sections</div>
+<div>
+Overview
+<ul>
+<li><a href="index.html">Getting Started</a></li>
+</ul>
+</div>
+<div>
+Basic HTML
+<ul>
+<li><a href="HTML_Intro.html">HTML Intro</a></li>
+<li><a href="Basic_Tags.html">Basic Tags</a></li>
+<li><a href="Tag_Attributes.html">Tag Attributes</a></li>
+<li><a href="Lists.html">Lists</a></li>
+<li><a href="HTML_Elements.html">HTML Elements</a></li>
+<li><a href="Formatting.html">Formatting</a></li>
+<li><a href="Tables.html">Tables</a></li>
+</ul>
+</div>
+<div>
+Advanced HTML
+<ul>
+<li><a href="Styles.html">Styles</a></li>
+<li><a href="Text_and_Fonts.html">Text and Fonts</a></li>
+<li><a href="Links.html">Links</a></li>
+<li><a href="Color.html">Color</a></li>
+<li><a href="HTML_Documents.html">HTML Documents</a></li>
+<li><a href="Advanced_Styles.html">Advanced Styles</a></li>
+</ul>
+</div>
+</div>
+<!--/sphider_noindex-->
+<div id="splash">Advanced HTML</div>
+<div id="content">
+<h1>Advanced Styles</h1>
+<div id="key">
+Key points
+<ul>
+<li>CSS styles can be defined in the head of an HTML document using the &lt;style&gt; tag.</li><li>Styles in the head are applied to elements by tag, class, or id.</li><li>When cascading styles conflict, the most specific one will be used.</li></ul></div><h3>Defining Styles in the Head</h3>
+<p>Besides using the style attribute, HTML includes a &lt;style&gt; tag that can be placed in the <b>&lt;head&gt;</b> of an HTML document. Anything in the style tag affects pieces of the entire document. Inside the style tag, rather than using HTML, you include CSS code, very similar to the code used in style attributes. The only difference is that styles are grouped together using { and }, and groups are assigned a tag that they affect. Here is a simple example:</p>
+<pre class="example"><a href="example.html?name=advStyleGreen">Click to view Live Example</a>
+
+<code>&lt;html&gt;
+	&lt;head&gt;
+		&lt;style type="text/css"&gt;
+			b {
+				color: green;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;This is normal text, this is &lt;b&gt;green&lt;/b&gt; text. This is also &lt;b&gt;green&lt;/b&gt;.&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code>
+An example style tag that turns all of the bold text green</pre><p>Which produces text similar to: This is normal text, this is <b style="color: green;">green</b> text. This is also <b style="color: green;">green</b>. First, the style tag requires the <i>type</i> attribute, whose only possible value is "text/css". This attribute tells the browser what type of style information is being used. Second, b { starts a group of styles that affect <i>every</i> &lt;b&gt; tag in the document. Then, color: green is a standard CSS property like you've used with the style attribute. Finally, the } ends the group of styles.</p>
+<h3>Another Example</h3>
+<p>Just like how style attributes can contain multiple properties, so too can a group of styles in the style tag.</p>
+<pre class="example"><a href="example.html?name=advStyleMultiple">Click to view Live Example</a>
+
+<code>&lt;html&gt;
+	&lt;head&gt;
+		&lt;style type="text/css"&gt;
+			body
+			{
+				font-family: Georgia, Arial, serif;
+				background-color: #DDDDBB;
+				color: #004400;
+				font-size: larger;
+			}
+			
+			i
+			{
+				font-weight: bold;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;This text is dark green on a light background. All &lt;i&gt;italic&lt;/i&gt; text will also be bold.&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code>
+An HTML document with multiple styles</pre><p>This above HTML will produce a document similar to the following:</p>
+<div style="width: 100%; height: 50px; font-size: larger; font-family: Georgia, Arial, serif; background-color: #DDDDBB; color: #004400;"><p>This text is dark green on a light background. All <i style="font-weight: bold;">italic</i> text will also be bold.</p></div>
+<p>Since CSS styles cascade and all visible HTML elements are within the body tag, the entire document is affected by anything in the body group. However, if any styles conflict between a parent and child element, the most specific style wins (in this case the child element is always more specific than the parent).</p>
+<h3>HTML Classes and Ids</h3>
+<p>So far, you have seen that CSS styles can be applied to all tags of a certain type (in the style tag) and individual tags (with the style attribute). However, CSS provides two more ways to choose which elements receive certain styles: classes and ids. Any tag that supports the style attribute can be given a <i>class</i> attribute. Styles within the style tag can reference the name of the class, and all elements regardless of which tag they are, will receive those styles:</p>
+<pre class="example"><a href="example.html?name=advStyleClasses">Click to view Live Example</a>
+
+<code>&lt;html&gt;
+	&lt;head&gt;
+		&lt;style type="text/css"&gt;
+			.special
+			{
+				color: red;
+				font-size: larger;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Normal text, &lt;span class="special"&gt;special text&lt;/span&gt;.&lt;/p&gt;
+		&lt;p class="special"&gt;A whole paragraph of special text!&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code>
+Using CSS classes</pre><p>Instead of using tag names, a dot (.) is used, followed by the name of the class. In the previous example, the style group is applied to any element whose class is "special". The resulting text would look like:</p>
+<p>Normal text, <span style="color: red; font-size: larger;">special text</span>.</p>
+<p style="color: red; font-size: larger;">A whole paragraph of special text!</p>
+<p>Ids are used very similarly. However, an element's id must be unique among all elements in the entire HTML document. Then, the CSS in the style tag can reference a particular element by its id using a # followed by the name of the element:</p>
+<pre class="example"><a href="example.html?name=advStyleId">Click to view Live Example</a>
+
+<code>&lt;html&gt;
+	&lt;head&gt;
+		&lt;style type="text/css"&gt;
+			p
+			{
+				color: green;
+			}
+			#redP
+			{
+				color: red;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Green paragraph&lt;/p&gt;
+		&lt;p id="redP"&gt;Red paragraph&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code>
+Cascading styles using an id</pre><p style="color: green;">Green paragraph</p>
+<p style="color: red;">Red paragraph</p>
+<p>Note that the red paragraph's styles override the generic style given to all p elements. This is because referencing by an id is essentially the same as including the style attribute on that element.</p>
+<h3>More CSS</h3>
+<p>There's a lot more to CSS than what's been covered in this manual. However, this is enough to get you started. If you are interested in learning more about CSS, I recommend <a href="http://www.w3schools.com/css/default.asp">w3schools.com</a>.</p>
+<!--sphider_noindex-->
+<div id="navigation">
+<a href="HTML_Documents.html">&lt;- Previous Section</a></div>
+</div>
+<div id="clear"></div>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2010 <a href="http://spanglerco.com/websites.htm">Paul Spangler</a></div>
+</body>
+<!--/sphider_noindex-->
+</html>

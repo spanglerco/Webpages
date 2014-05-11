@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Text and Fonts - Creating Webpages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="Paul Spangler" />
+<link rel="shortcut icon" href="http://spanglerco.com/favicon.gif" />
+<link rel="stylesheet" href="css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/IE6-main.css" />
+<![endif]-->
+</head>
+<body>
+<!--sphider_noindex-->
+<div id="page">
+<div id="header">
+<div id="headerText">
+<div id="search">Search the website:<form action="search.html" method="get" style="display: inline;">
+<table><tr><td>
+<div style="text-align: left; display: inline;"> 
+<input type="text" name="query" id="query" size="40" value="" />
+</div>
+</td>
+<td>
+<input type="submit" value="Search" />
+<input type="hidden" name="search" value="1" />
+</td></tr></table>
+</form>
+</div>
+<div id="title">Creating Webpages</div>
+</div>
+<ul id="topLinks">
+<li id="feedbackLink"><a href="feedback.html">Feedback</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="leftLinks">
+<div id="sectionTitle">Sections</div>
+<div>
+Overview
+<ul>
+<li><a href="index.html">Getting Started</a></li>
+</ul>
+</div>
+<div>
+Basic HTML
+<ul>
+<li><a href="HTML_Intro.html">HTML Intro</a></li>
+<li><a href="Basic_Tags.html">Basic Tags</a></li>
+<li><a href="Tag_Attributes.html">Tag Attributes</a></li>
+<li><a href="Lists.html">Lists</a></li>
+<li><a href="HTML_Elements.html">HTML Elements</a></li>
+<li><a href="Formatting.html">Formatting</a></li>
+<li><a href="Tables.html">Tables</a></li>
+</ul>
+</div>
+<div>
+Advanced HTML
+<ul>
+<li><a href="Styles.html">Styles</a></li>
+<li><a href="Text_and_Fonts.html">Text and Fonts</a></li>
+<li><a href="Links.html">Links</a></li>
+<li><a href="Color.html">Color</a></li>
+<li><a href="HTML_Documents.html">HTML Documents</a></li>
+<li><a href="Advanced_Styles.html">Advanced Styles</a></li>
+</ul>
+</div>
+</div>
+<!--/sphider_noindex-->
+<div id="splash">Advanced HTML</div>
+<div id="content">
+<h1>Text and Fonts</h1>
+<div id="key">
+Key points
+<ul>
+<li>Text can be styled using the &lt;span&gt; tag, or groups of elements can be styled with the &lt;div&gt; tag.</li><li>Block elements can contain other block or inline elements, but inline elements can only contain inline elements.</li><li>You should carefully consider alternative fonts in case a user's web browser does not support your favorite.</li></ul></div><h3>Structuring Text</h3>
+<p>HTML provides several tags other than &lt;p&gt; for breaking text into pieces. Earlier sections discussed lists and tables, but some other <i>containers</i> are &lt;div&gt; (division) and &lt;span&gt;. Both of these tags are mainly used to apply styles to sections of an HTML document. For example, the following text can be written in two ways:</p>
+<div style="color: maroon;">
+	<p>Maroon paragraph 1.</p>
+	<p>Another maroon paragraph.</p>
+</div>
+<pre class="example"><a href="example.html?name=textColor">Click to view Live Example</a>
+
+<code>&lt;p style="color: maroon;"&gt;Maroon paragraph 1.&lt;/p&gt;
+&lt;p style="color: maroon;"&gt;Another maroon paragraph.&lt;/p&gt;</code>
+One way to color multiple paragraphs</pre><pre class="example"><a href="example.html?name=textDiv">Click to view Live Example</a>
+
+<code>&lt;div style="color: maroon;"&gt;
+	&lt;p&gt;Maroon paragraph 1.&lt;/p&gt;
+	&lt;p&gt;Another maroon paragraph.&lt;/p&gt;
+&lt;/div&gt;</code>
+Coloring multiple paragraphs using &lt;div&gt;</pre><p>A single &lt;div&gt; element can contain multiple paragraphs, or even other containers. Since styles cascade, any styles added to the div element will be given to all of the paragraphs inside the div.</p>
+<h3>The &lt;span&gt; Tag</h3>
+<p>Another useful tag for styling text is the &lt;span&gt; tag. By itself, it doesn't do anything, but when given a style attribute, it allows only part of a paragraph to be styled:</p>
+<pre class="example"><a href="example.html?name=textSpan">Click to view Live Example</a>
+
+<code>&lt;p&gt;This is normal text, but &lt;span style="color: blue; font-weight: bold;"&gt;this is not&lt;/span&gt;.&lt;/p&gt;</code>
+Styling a few words in a paragraph</pre><p>Which produces the following text. This is normal text, but <span style="color: blue; font-weight: bold;">this is not</span>.</p>
+<h3>Block or Inline</h3>
+<p>The difference between &lt;div&gt; and &lt;span&gt; is that the div tag is called a <i>block</i> tag, while span is an <i>inline</i> tag. Block elements can contain other block or inline elements, but cause web browsers to add space around them. The &lt;p&gt; tag is a block element, which is why two paragraphs start on different lines.</p>
+<p>On the other hand, inline elements do not start on a new line, but can only contain other inline elements. Putting a &lt;div&gt; inside of a &lt;span&gt; would work in modern browsers, but would not be correct (and is likely to not be consistent across different browsers). Plain text by itself is considered an inline element.</p>
+<h3>Font</h3>
+<p>Web browser automatically size header tags, but most times that's not enough. Changing font size was introduced in the previous section about styles, but there is also a CSS style property for setting the font for text. The <i>font-family</i> property allows you to set the font for any HTML tag to a list of choices. The first font that the web browser supports in the list will be used. For example:</p>
+<p style="font-family: madeupfont, Harrington, Helvetica, Arial, serif;">Some of you will see Harrington font, but you may see Helvetica, Arial, or a generic serif font.</p>
+<pre class="example"><a href="example.html?name=textFont">Click to view Live Example</a>
+
+<code>&lt;p style="font-family: madeupfont, Harrington, Helvetica, Arial, serif;"&gt;Some of you will see Harrington font, but you may see Helvetica, Arial, or a generic serif font.&lt;/p&gt;</code>
+Changing a paragraph's font</pre><p>The font-family property should always contain at least one "standard" font and one of the default fonts, serif or sans-serif. Otherwise the browser is free to choose whatever font it wants.</p>
+<!--sphider_noindex-->
+<div id="navigation">
+<a href="Styles.html">&lt;- Previous Section</a><a class="float-right" href="Links.html">Next Section -&gt;</a></div>
+</div>
+<div id="clear"></div>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2010 <a href="http://spanglerco.com/websites.htm">Paul Spangler</a></div>
+</body>
+<!--/sphider_noindex-->
+</html>

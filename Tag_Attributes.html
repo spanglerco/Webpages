@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Tag Attributes - Creating Webpages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="Paul Spangler" />
+<link rel="shortcut icon" href="http://spanglerco.com/favicon.gif" />
+<link rel="stylesheet" href="css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/IE6-main.css" />
+<![endif]-->
+</head>
+<body>
+<!--sphider_noindex-->
+<div id="page">
+<div id="header">
+<div id="headerText">
+<div id="search">Search the website:<form action="search.html" method="get" style="display: inline;">
+<table><tr><td>
+<div style="text-align: left; display: inline;"> 
+<input type="text" name="query" id="query" size="40" value="" />
+</div>
+</td>
+<td>
+<input type="submit" value="Search" />
+<input type="hidden" name="search" value="1" />
+</td></tr></table>
+</form>
+</div>
+<div id="title">Creating Webpages</div>
+</div>
+<ul id="topLinks">
+<li id="feedbackLink"><a href="feedback.html">Feedback</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="leftLinks">
+<div id="sectionTitle">Sections</div>
+<div>
+Overview
+<ul>
+<li><a href="index.html">Getting Started</a></li>
+</ul>
+</div>
+<div>
+Basic HTML
+<ul>
+<li><a href="HTML_Intro.html">HTML Intro</a></li>
+<li><a href="Basic_Tags.html">Basic Tags</a></li>
+<li><a href="Tag_Attributes.html">Tag Attributes</a></li>
+<li><a href="Lists.html">Lists</a></li>
+<li><a href="HTML_Elements.html">HTML Elements</a></li>
+<li><a href="Formatting.html">Formatting</a></li>
+<li><a href="Tables.html">Tables</a></li>
+</ul>
+</div>
+<div>
+Advanced HTML
+<ul>
+<li><a href="Styles.html">Styles</a></li>
+<li><a href="Text_and_Fonts.html">Text and Fonts</a></li>
+<li><a href="Links.html">Links</a></li>
+<li><a href="Color.html">Color</a></li>
+<li><a href="HTML_Documents.html">HTML Documents</a></li>
+<li><a href="Advanced_Styles.html">Advanced Styles</a></li>
+</ul>
+</div>
+</div>
+<!--/sphider_noindex-->
+<div id="splash">Basic HTML</div>
+<div id="content">
+<h1>Tag Attributes</h1>
+<div id="key">
+Key points
+<ul>
+<li>Some HTML tags require attributes to give the web browser more information.</li><li>HTML tag attributes are in the form <i>name</i>="<i>value</i>".</li><li>A single tag can have multiple attributes, but cannot have the same attribute more than once.</li></ul></div><p>For some tags, like the &lt;a&gt; and &lt;img&gt; from the previous section, web browsers need extra information than just the name of the tag. HTML tag attributes gives browsers that extra information so it knows where to find an image, for example.</p>
+<h3>Attribute Format</h3>
+<p>Attributes have a specific format: <i>name</i>="<i>value</i>". Where <i>name</i> is the attribute's name, similar to a tag's name, and <i>value</i> is what the browser uses to determine what to do with the tag. Note that the quotation marks ("") around the value are not part of the value, but rather let the browser know where the value starts and where it ends. Here is an example of an attribute within the &lt;a&gt; tag:</p>
+<pre class="example"><a href="example.html?name=attributesHref">Click to view Live Example</a>
+
+<code>&lt;a href="http://wikipedia.org"&gt;Click here&lt;/a&gt;</code>
+An &lt;a&gt; tag with the href attribute</pre><p>Some browsers allow HTML authors to leave out the quotation marks for short values, but it is not recommended nor considered correct HTML.</p>
+<h3>Multiple Attributes</h3>
+<p>A single HTML tag can have multiple attributes separated by a space. However, a single tag cannot have the same attribute more than once. For example, an &lt;img&gt; can have the <i>src</i>, <i>width</i>, and <i>height</i> attributes, but cannot have src twice.</p>
+<pre class="example"><a href="example.html?name=attributesSize">Click to view Live Example</a>
+
+<code>&lt;img src="http://blog.spanglerco.com/headerS1.jpg" width="20px" height="20px" /&gt;</code>
+The &lt;img&gt; tag can also have the width and height attributes</pre><p>For &lt;img&gt; tags, the width and height attributes are optional. The <i>px</i> at the end of the numbers mean pixels and will be discussed in the later section about HTML styles.</p>
+<!--sphider_noindex-->
+<div id="navigation">
+<a href="Basic_Tags.html">&lt;- Previous Section</a><a class="float-right" href="Lists.html">Next Section -&gt;</a></div>
+</div>
+<div id="clear"></div>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2010 <a href="http://spanglerco.com/websites.htm">Paul Spangler</a></div>
+</body>
+<!--/sphider_noindex-->
+</html>

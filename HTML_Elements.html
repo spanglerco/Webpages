@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HTML Elements - Creating Webpages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="Paul Spangler" />
+<link rel="shortcut icon" href="http://spanglerco.com/favicon.gif" />
+<link rel="stylesheet" href="css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/IE6-main.css" />
+<![endif]-->
+</head>
+<body>
+<!--sphider_noindex-->
+<div id="page">
+<div id="header">
+<div id="headerText">
+<div id="search">Search the website:<form action="search.html" method="get" style="display: inline;">
+<table><tr><td>
+<div style="text-align: left; display: inline;"> 
+<input type="text" name="query" id="query" size="40" value="" />
+</div>
+</td>
+<td>
+<input type="submit" value="Search" />
+<input type="hidden" name="search" value="1" />
+</td></tr></table>
+</form>
+</div>
+<div id="title">Creating Webpages</div>
+</div>
+<ul id="topLinks">
+<li id="feedbackLink"><a href="feedback.html">Feedback</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="leftLinks">
+<div id="sectionTitle">Sections</div>
+<div>
+Overview
+<ul>
+<li><a href="index.html">Getting Started</a></li>
+</ul>
+</div>
+<div>
+Basic HTML
+<ul>
+<li><a href="HTML_Intro.html">HTML Intro</a></li>
+<li><a href="Basic_Tags.html">Basic Tags</a></li>
+<li><a href="Tag_Attributes.html">Tag Attributes</a></li>
+<li><a href="Lists.html">Lists</a></li>
+<li><a href="HTML_Elements.html">HTML Elements</a></li>
+<li><a href="Formatting.html">Formatting</a></li>
+<li><a href="Tables.html">Tables</a></li>
+</ul>
+</div>
+<div>
+Advanced HTML
+<ul>
+<li><a href="Styles.html">Styles</a></li>
+<li><a href="Text_and_Fonts.html">Text and Fonts</a></li>
+<li><a href="Links.html">Links</a></li>
+<li><a href="Color.html">Color</a></li>
+<li><a href="HTML_Documents.html">HTML Documents</a></li>
+<li><a href="Advanced_Styles.html">Advanced Styles</a></li>
+</ul>
+</div>
+</div>
+<!--/sphider_noindex-->
+<div id="splash">Basic HTML</div>
+<div id="content">
+<h1>HTML Elements</h1>
+<div id="key">
+Key points
+<ul>
+<li>Web browsers have a defined set of rules for using HTML tags.</li><li>Empty tags don't have any content, and end with a /.</li><li>Some tags have attributes, which always appear in the start tag.</li><li>HTML elements, which include a tag, its attributes, and its content, can be nested.</li></ul></div><p>Previous sections have used discussed HTML tags and attributes, but a tag has not yet been formally defined.</p>
+<h3>What is an HTML Tag?</h3>
+<p>HTML has a set of rules when it comes to using a tag, and not every tag can be used everywhere in an HTML document. An HTML tag is always lowercase and at a minimum has a name. The simplest tag HTML has to offer is the &lt;br&gt; (line break) tag, which forces the following text to start on a new line:</p>
+<pre class="example"><code>&lt;br /&gt;</code>
+A single line break tag</pre><p>Line break is an example of a tag that doesn't have any content: it is meaningful by itself. These tags are called empty tags, and the slash at the end of the tag tells the browser not to look for any content associated with that tag. Most tags, however, do have content. For example, the header tags:</p>
+<pre class="example"><code>&lt;h1&gt;This is a large header&lt;/h1&gt;</code>
+A single header tag with content</pre><p>Tags that have content are divided into three parts: a start tag, the content, and an end tag. In the previous example, &lt;h1&gt; is the start tag, "This is a large header" is the content, and &lt;/h1&gt; is the end tag. The end tag lets the browser know when to stop applying content to that tag.</p>
+<h3>Tag Attributes</h3>
+<p>A tag can also have attributes, such as the anchor tag's <i>href</i> attribute:</p>
+<pre class="example"><a href="example.html?name=elementsLink">Click to view Live Example</a>
+
+<code>&lt;a href="http://spanglerco.com"&gt;Look, a link&lt;/a&gt;</code>
+A link with an href attribute</pre><p>Attributes always appear in the start tag, but empty tags can also contain attributes (such as &lt;img&gt;). Tags can also have multiple attributes separated by spaces, but can only have each attribute at most once (a link cannot have two destinations).</p>
+<h3>HTML Elements</h3>
+<p>All of these concepts combine to form the definition on an HTML element. An element is a tag, its attributes, and its content, including both the start tag and the end tag (if there is one). A tag's content can include other elements (such as list items in an unordered list), allowing HTML documents to describe a nested structure such as tables in a later section. Nesting elements also allows for formatting such as <b>bold</b> and <i>italics</i>. Formatting is the topic of the next section.</p>
+<pre class="example"><a href="example.html?name=elementsNested">Click to view Live Example</a>
+
+<code>&lt;p&gt;Nesting elements also allows for formatting such as &lt;b&gt;bold&lt;/b&gt; and &lt;i&gt;italics&lt;/i&gt;.&lt;/p&gt;</code>
+Example a nesting elements using formatting</pre><!--sphider_noindex-->
+<div id="navigation">
+<a href="Lists.html">&lt;- Previous Section</a><a class="float-right" href="Formatting.html">Next Section -&gt;</a></div>
+</div>
+<div id="clear"></div>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2010 <a href="http://spanglerco.com/websites.htm">Paul Spangler</a></div>
+</body>
+<!--/sphider_noindex-->
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Basic Tags - Creating Webpages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="Paul Spangler" />
+<link rel="shortcut icon" href="http://spanglerco.com/favicon.gif" />
+<link rel="stylesheet" href="css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/IE6-main.css" />
+<![endif]-->
+</head>
+<body>
+<!--sphider_noindex-->
+<div id="page">
+<div id="header">
+<div id="headerText">
+<div id="search">Search the website:<form action="search.html" method="get" style="display: inline;">
+<table><tr><td>
+<div style="text-align: left; display: inline;"> 
+<input type="text" name="query" id="query" size="40" value="" />
+</div>
+</td>
+<td>
+<input type="submit" value="Search" />
+<input type="hidden" name="search" value="1" />
+</td></tr></table>
+</form>
+</div>
+<div id="title">Creating Webpages</div>
+</div>
+<ul id="topLinks">
+<li id="feedbackLink"><a href="feedback.html">Feedback</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="leftLinks">
+<div id="sectionTitle">Sections</div>
+<div>
+Overview
+<ul>
+<li><a href="index.html">Getting Started</a></li>
+</ul>
+</div>
+<div>
+Basic HTML
+<ul>
+<li><a href="HTML_Intro.html">HTML Intro</a></li>
+<li><a href="Basic_Tags.html">Basic Tags</a></li>
+<li><a href="Tag_Attributes.html">Tag Attributes</a></li>
+<li><a href="Lists.html">Lists</a></li>
+<li><a href="HTML_Elements.html">HTML Elements</a></li>
+<li><a href="Formatting.html">Formatting</a></li>
+<li><a href="Tables.html">Tables</a></li>
+</ul>
+</div>
+<div>
+Advanced HTML
+<ul>
+<li><a href="Styles.html">Styles</a></li>
+<li><a href="Text_and_Fonts.html">Text and Fonts</a></li>
+<li><a href="Links.html">Links</a></li>
+<li><a href="Color.html">Color</a></li>
+<li><a href="HTML_Documents.html">HTML Documents</a></li>
+<li><a href="Advanced_Styles.html">Advanced Styles</a></li>
+</ul>
+</div>
+</div>
+<!--/sphider_noindex-->
+<div id="splash">Basic HTML</div>
+<div id="content">
+<h1>Basic Tags</h1>
+<div id="key">
+Key points
+<ul>
+<li>There are a lot of HTML tags, but only a handful are needed to write a full HTML document.</li><li>There are six different sizes of header tags, h1 (largest) to h6 (smallest).</li><li>Links and images require attributes to tell the browser more information about them.</li><li>Not all tags have content. These tags do not have an end tag but instead end with a /.</li></ul></div><p>Modern web browsers recognize over 75 HTML tags. However, some of them are fundamental in creating and structuring web pages.</p>
+<h3>Headers</h3>
+<p>The previous example used two header tags, but note that the tag was &lt;h<i>1</i>&gt;. In fact, there are six different header tags, each ranging in size. You can use these different levels of headers to achieve an outline-style hierarchy within a web page. Remember to include an end tag for each header tag (e.g. '&lt;/h1&gt;) to tell the browser to return to normal text. From largest to smallest, the header tags are:</p>
+<pre class="example"><a href="example.html?name=basicHeaders">Click to view Live Example</a>
+
+<code>&lt;h1&gt;This is a main heading&lt;/h1&gt;
+&lt;h2&gt;This is a sub-heading&lt;/h2&gt;
+&lt;h3&gt;This is a medium heading&lt;/h3&gt;
+&lt;h4&gt;This is a heading&lt;/h4&gt;
+&lt;h5&gt;This is a small heading&lt;/h5&gt;
+&lt;h6&gt;This is a smaller heading&lt;/h6&gt;</code>
+Header tags, largest (h1) to smallest (h6)</pre><h3>Paragraphs</h3>
+Another tag from the last section's example document is the paragraph tag, &lt;p&gt;. These simply group text together into blocks to form paragraphs. Like header tags, be sure to include end paragraph tags. Some browsers do not require end tags for paragraphs, but leaving them out can lead to problems later in the HTML document.</p>
+<pre class="example"><a href="example.html?name=basicPara">Click to view Live Example</a>
+
+<code>&lt;p&gt;This is a paragraph of text. Be sure to end the paragraph:&lt;/p&gt;</code>
+A short paragraph</pre><h3>Links</h3>
+Most web pages contain <i>hyperlinks</i>, which allow users to move between different pages without having to type the URL for each page. For example, the area above and to the left is full of links that allow navigation between the different sections of this website. Links don't have to be between two pages on the same site, though. Here are links to <a href="http://google.com">Google</a>, <a href="http://wikipedia.org">Wikipedia</a>, and <a href="http://spanglerco.com">my homepage</a>. Links allow web pages to be interconnected and are fundamental in how search engines like Yahoo work.</p>
+<p>You can insert a link into an HTML document using the &lt;a&gt; tag (a stands for anchor). Here is the HTML used above to insert three links:</p>
+<pre class="example"><a href="example.html?name=basicLinks">Click to view Live Example</a>
+
+<code>Here are links to &lt;a href="http://google.com"&gt;Google&lt;/a&gt;, &lt;a href="http://wikipedia.org"&gt;Wikipedia&lt;/a&gt;, and &lt;a href="http://spanglerco.com"&gt;my homepage&lt;/a&gt;.</code>
+Inserting several links</pre><h3>Attributes</h3>
+<p>The previous example introduces HTML tag <i>attributes</i>. The &lt;a&gt; tag uses the <i>href</i> attribute (href stands for hypertext reference) to tell the browser where to send the user when the link is clicked. To make links, you only need to know that attributes have a name (like href) and a value (like "http://google.com"), which are separated by an =. The next section is all about HTML tag attributes and will go into more detail.</p>
+<h3>Images</h3>
+<p>Another important HTML tag is the image tag, &lt;img&gt;. When a web browser finds an &lt;img&gt; tag, it displays the image referenced by the <i>src</i> attribute.</p>
+<pre class="example"><a href="example.html?name=basicImage">Click to view Live Example</a>
+
+<code>&lt;img src="http://spanglerco.com/images/top.jpg" /&gt;</code>
+Using the &lt;img&gt; tag to display an image</pre><p>The &lt;img&gt; tag also introduces a new concept: not all HTML tags have content (a tag's content appears between the tag and its end tag). Specifically, the &lt;img&gt; tag does not have any content, so the tag ends with a /. This extra / at the end represents the missing end tag, and should be used whenever a tag doesn't have any content.</p>
+<!--sphider_noindex-->
+<div id="navigation">
+<a href="HTML_Intro.html">&lt;- Previous Section</a><a class="float-right" href="Tag_Attributes.html">Next Section -&gt;</a></div>
+</div>
+<div id="clear"></div>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2010 <a href="http://spanglerco.com/websites.htm">Paul Spangler</a></div>
+</body>
+<!--/sphider_noindex-->
+</html>

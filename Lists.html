@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Lists - Creating Webpages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="author" content="Paul Spangler" />
+<link rel="shortcut icon" href="http://spanglerco.com/favicon.gif" />
+<link rel="stylesheet" href="css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/IE6-main.css" />
+<![endif]-->
+</head>
+<body>
+<!--sphider_noindex-->
+<div id="page">
+<div id="header">
+<div id="headerText">
+<div id="search">Search the website:<form action="search.html" method="get" style="display: inline;">
+<table><tr><td>
+<div style="text-align: left; display: inline;"> 
+<input type="text" name="query" id="query" size="40" value="" />
+</div>
+</td>
+<td>
+<input type="submit" value="Search" />
+<input type="hidden" name="search" value="1" />
+</td></tr></table>
+</form>
+</div>
+<div id="title">Creating Webpages</div>
+</div>
+<ul id="topLinks">
+<li id="feedbackLink"><a href="feedback.html">Feedback</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="leftLinks">
+<div id="sectionTitle">Sections</div>
+<div>
+Overview
+<ul>
+<li><a href="index.html">Getting Started</a></li>
+</ul>
+</div>
+<div>
+Basic HTML
+<ul>
+<li><a href="HTML_Intro.html">HTML Intro</a></li>
+<li><a href="Basic_Tags.html">Basic Tags</a></li>
+<li><a href="Tag_Attributes.html">Tag Attributes</a></li>
+<li><a href="Lists.html">Lists</a></li>
+<li><a href="HTML_Elements.html">HTML Elements</a></li>
+<li><a href="Formatting.html">Formatting</a></li>
+<li><a href="Tables.html">Tables</a></li>
+</ul>
+</div>
+<div>
+Advanced HTML
+<ul>
+<li><a href="Styles.html">Styles</a></li>
+<li><a href="Text_and_Fonts.html">Text and Fonts</a></li>
+<li><a href="Links.html">Links</a></li>
+<li><a href="Color.html">Color</a></li>
+<li><a href="HTML_Documents.html">HTML Documents</a></li>
+<li><a href="Advanced_Styles.html">Advanced Styles</a></li>
+</ul>
+</div>
+</div>
+<!--/sphider_noindex-->
+<div id="splash">Basic HTML</div>
+<div id="content">
+<h1>Lists</h1>
+<div id="key">
+Key points
+<ul>
+<li>HTML defines three types of lists: unordered (bulleted), ordered (numbered), and definition lists.</li><li>Web browsers automatically add bullets, numbering, and formatting for lists.</li><li>Unordered and ordered lists both use the &lt;li&gt; tag for each item within the list.</li><li>Definition lists use &lt;dt&gt; and &lt;dd&gt; tags for each term.</li></ul></div><h3>Unordered (bulleted) Lists</h3>
+<p>Lists are an easy way for web pages to present a series of points. For example, you've seen an unordered list at the top of each section of this website giving key points about the section. In HTML, unordered lists (sometimes called bulleted lists) are inserted using the &lt;ul&gt; tag. Unlike previous tags, however, the &lt;ul&gt; tag itself doesn't do much. Instead, it requires another tag, &lt;li&gt; (list item) to define each item within the list:</p>
+<pre class="example"><a href="example.html?name=listsUl">Click to view Live Example</a>
+
+<code>&lt;ul&gt;
+	&lt;li&gt;This is the first item.&lt;/li&gt;
+	&lt;li&gt;This is the second item.&lt;/li&gt;
+	&lt;li&gt;This is the third item.&lt;/li&gt;
+&lt;/ul&gt;</code>
+A simple unordered list</pre><p>In the previous example, note how each &lt;li&gt; tag is within the main &lt;ul&gt; tag. That is how the web browser knows the list items are related and should be added to the same list. Also, it's easy to forget to include the end tags for &lt;li&gt;, but just like paragraphs, it can cause problems later.</p>
+<h3>Ordered (numbered) Lists</h3>
+<p>The other common type of HTML list is the ordered list (also called a numbered list). The basic usage of the ordered list is almost identical to unordered lists: instead of using &lt;ul&gt;, just use &lt;ol&gt;. The browser will automatically number each item in the list.</p>
+<pre class="example"><a href="example.html?name=listsOl">Click to view Live Example</a>
+
+<code>&lt;ol&gt;
+	&lt;li&gt;This is the first item.&lt;/li&gt;
+	&lt;li&gt;This is the second item.&lt;/li&gt;
+	&lt;li&gt;This is the third item.&lt;/li&gt;
+&lt;/ol&gt;</code>
+A simple ordered list</pre><p>The &lt;li&gt; tag is still used to indicate a list item, but using &lt;ol&gt; tells the browser to add numbers instead of bullets to the beginning of each item.</p>
+<h3>Definition Lists</h3>
+<p>HTML defines a third type of list, though it is much less common. A definition list does not use &lt;li&gt; tags to denote each list item. Instead, these lists have two parts for each item: a term (name) and a description. Descriptions are indented on the line after each term in the list. The tags for definition lists are &lt;dl&gt; (definition list), &lt;dt&gt; (definition term), and &lt;dd&gt; (definition description):</p>
+<pre class="example"><a href="example.html?name=listsDl">Click to view Live Example</a>
+
+<code>&lt;dl&gt;
+	&lt;dt&gt;First term&lt;/dt&gt;
+		&lt;dd&gt;Description of the first term&lt;/dd&gt;
+	&lt;dt&gt;Second term&lt;/dt&gt;
+		&lt;dd&gt;Description of the second term&lt;/dd&gt;
+	&lt;dt&gt;Third term&lt;/dt&gt;
+		&lt;dd&gt;Description of the third term&lt;/dd&gt;
+&lt;/dl&gt;</code>
+A simple definition list</pre><p>Note that the &lt;dd&gt; is <i>not</i> inside the &lt;dt&gt; tag. Indenting has only been added to help visualize what the list will look like in a web browser.</p>
+<!--sphider_noindex-->
+<div id="navigation">
+<a href="Tag_Attributes.html">&lt;- Previous Section</a><a class="float-right" href="HTML_Elements.html">Next Section -&gt;</a></div>
+</div>
+<div id="clear"></div>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2010 <a href="http://spanglerco.com/websites.htm">Paul Spangler</a></div>
+</body>
+<!--/sphider_noindex-->
+</html>
